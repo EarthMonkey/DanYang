@@ -1,11 +1,39 @@
 <!-- Created by L.H.S on 2017/8/13. -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>丹阳经济开发区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--框架必须的CSS文件,可定制化-->
+
+    <!--<link type="image/x-icon" href="./theme/custom/img/favicon.ico" rel="icon"/>-->
 </head>
 <body>
+
+<!--页面顶层导航区-->
+<nav>
+    <!--<div id="login_nav" ng-controller="loginNavCtrl" ng-include="loginNav.url"></div>-->
+    <div style="width: 100%;height: 80px; background-color: blue;">
+
+    </div>
+</nav>
+
+<!--中间内容区-->
+<div id="content">
+    <div ui-view></div>
+</div>
+
+<!--页脚区-->
+<footer>
+    <div id="footer"></div>
+</footer>
+
+
+<!--模块化代码加载起始处，入口js为main.js-->
+<script type="text/javascript" src="./lib/jquery.min.js"></script>
+<script type="text/javascript" src="./lib/require.js"></script>
+<script type="text/javascript" src="./main.js"></script>
 
 </body>
 </html>
