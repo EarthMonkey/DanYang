@@ -7,11 +7,12 @@
  * 所有的service router都在这里进行统一的配置
  */
 
-require(['ui-router/angular-ui-router',
+define(['ui-router/angular-ui-router',
         'framework/topnav/topnavCtrl',
+        'framework/topnav/navListService',
         '../business/home/configures/homeRouterConfig'
     ],
-    function (router, topnavCtrl,
+    function (router, topnavCtrl, navListService,
               homeRouterConfig) {
         'use strict';
 
@@ -24,7 +25,7 @@ require(['ui-router/angular-ui-router',
         var framework = angular.module('framework', dependency);
 
         framework.controller('topnavCtrl', topnavCtrl); // 顶部菜单控制器
-        // framework.service('navList', navList); // 菜单列表数据服务
+        framework.service('navListService', navListService); // 菜单列表数据服务
 
         // 初始跳转至首页模块
         framework.config(['$urlRouterProvider', function ($urlRouterProvider) {

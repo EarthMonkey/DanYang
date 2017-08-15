@@ -10,11 +10,11 @@ define(['lazy-load/lazyLoad'],
         var configArr = [{
             name: 'home',
             url: '/home',
-            templateUrl: 'webapp/business/home/views/home.html',
+            templateUrl: 'business/home/views/home.html',
             controller: 'home.ctrl',
             scripts: {
-                services: ['webapp/business/home/services/homeService'],
-                controllers: ['webapp/business/home/controllers/homeCtrl']
+                controllers: ['business/home/controllers/homeCtrl'],
+                services: ['business/home/services/homeService']
             }
         }];
 

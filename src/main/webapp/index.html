@@ -12,11 +12,8 @@
 <body>
 
 <!--页面顶层导航区-->
-<nav>
-    <!--<div id="login_nav" ng-controller="loginNavCtrl" ng-include="loginNav.url"></div>-->
-    <div style="width: 100%;height: 80px; background-color: blue;">
-
-    </div>
+<nav ng-controller="topnavCtrl">
+    <div id="login_nav" ng-include="menus.url"></div>
 </nav>
 
 <!--中间内容区-->

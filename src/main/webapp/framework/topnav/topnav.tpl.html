@@ -1,5 +1,24 @@
 <!-- Created by L.H.S on 2017/8/14. -->
 
-<div style="width: 100%;height: 80px; background-color: blue;">
-
+<div id="main_menu_div" style="width:100%;position:fixed;top:0px;z-index: 1000">
+    <div id="tiny-menu" style="margin: 0 auto; min-width: 1280px; max-width: 1440px">
+        <ul>
+            <li ng-repeat="m1 in navList">
+                <a ng-if="m1.state" ui-sref="{{m1.state}}">
+                    <h1 ng-class="{menu_active: isActived(m1.state)}">{{m1.text}}</h1>
+                </a>
+                <a ng-if="!(m1.state)">
+                    <h1 ng-class="{menu_active: isActived(m1.state)}">{{m1.text}}</h1>
+                </a>
+                <ul ng-repeat="m2 in m1.children">
+                    <li ng-if="m2.state">
+                        <a ui-sref="{{m2.state}}"><h2>{{m2.text}}</h2></a>
+                    </li>
+                    <li ng-repeat="m3 in m2.children">
+                        <a ui-sref="{{m3.state}}">{{m3.text}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </div>
