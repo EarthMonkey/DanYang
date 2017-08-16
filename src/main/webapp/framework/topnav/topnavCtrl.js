@@ -12,6 +12,10 @@ define([], function () {
         };
         $scope.navList = navListService.navList;
 
+        $scope.isNavCollapsed = true;
+        $scope.isCollapsed = false;
+        $scope.isCollapsedHorizontal = false;
+
         // 判断Menu的子状态激活时，是否需要隶属于其父状态
         $scope.isActived = function (firstLevelState) {
             if (typeof (firstLevelState) !== 'undefined') {
@@ -22,6 +26,5 @@ define([], function () {
         };
     }];
 
-    // ctrl.$injector = ['$scope', 'navListService', '$state'];
     return topnavCtrl;
 });

@@ -10,16 +10,21 @@
 define(['ui-router/angular-ui-router',
         'framework/topnav/topnavCtrl',
         'framework/topnav/navListService',
-        '../business/home/configures/homeRouterConfig'
+        'business/home/configures/homeRouterConfig',
+        'business/application/configures/appRouterConfig'
     ],
     function (router, topnavCtrl, navListService,
-              homeRouterConfig) {
+              homeRouterConfig, appRouterConfig) {
         'use strict';
 
         // 注入框架的配置文件（新增业务模块在此处添加注册）
         var dependency = [
+            'ngAnimate',
+            'ngSanitize',
+            'ui.bootstrap',
             'ui.router',
-            homeRouterConfig.name
+            homeRouterConfig.name,
+            appRouterConfig.name
         ];
 
         var framework = angular.module('framework', dependency);

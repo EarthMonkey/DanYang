@@ -10,7 +10,7 @@ define([''], function () {
         var service = this;
 
         service.getTest = function () {
-            return "this is test";
+            return "welcome to homepage";
         };
 
     };
