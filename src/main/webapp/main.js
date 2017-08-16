@@ -11,11 +11,9 @@
 require.config({
     baseUrl: './',
     paths: {
-        'angular': 'lib/angular/angular',
         'ui-router': 'lib/angular',
         'lazy-load': 'lib'
-    },
-    "ui-router": ["angular"]
+    }
 });
 
 /**
